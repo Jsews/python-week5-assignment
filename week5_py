@@ -1,0 +1,62 @@
+# Base class
+class Smartphone:
+    def __init__(self, brand, model, battery_life):
+        self.brand = brand
+        self.model = model
+        self.battery_life = battery_life  # in hours
+    
+    def call(self, number):
+        print(f"{self.brand} {self.model} is calling {number} 📞")
+    
+    def battery_status(self):
+        print(f"Battery life: {self.battery_life} hours left 🔋")
+
+# Derived class (Inheritance)
+class SmartphonePro(Smartphone):
+    def __init__(self, brand, model, battery_life, camera_quality):
+        super().__init__(brand, model, battery_life)  # Call parent constructor
+        self.camera_quality = camera_quality
+    
+    def take_photo(self):
+        print(f"{self.brand} {self.model} takes a {self.camera_quality} photo 📸")
+
+# Create objects
+phone1 = Smartphone("Samsung", "Galaxy S23", 20)
+phone2 = SmartphonePro("Apple", "iPhone 15 Pro", 18, "4K Ultra HD")
+
+# Use methods
+phone1.call("123456789")
+phone1.battery_status()
+
+phone2.call("987654321")
+phone2.take_photo()
+phone2.battery_status()
+✅ Here we used constructor (__init__), methods, and inheritance.
+
+Activity 2: Polymorphism Challenge 🎭
+We’ll create vehicles that share a move() method but behave differently.
+
+python
+Copy code
+class Vehicle:
+    def move(self):
+        print("The vehicle moves")
+
+class Car(Vehicle):
+    def move(self):
+        print("Driving 🚗")
+
+class Plane(Vehicle):
+    def move(self):
+        print("Flying ✈️")
+
+class Boat(Vehicle):
+    def move(self):
+        print("Sailing ⛵")
+
+# Polymorphism in action
+vehicles = [Car(), Plane(), Boat()]
+
+for v in vehicles:
+    v.move()
+✅ Same method move() but different behaviors (polymorphism).
