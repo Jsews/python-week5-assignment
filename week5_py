@@ -34,10 +34,7 @@ phone2.battery_status()
 ✅ Here we used constructor (__init__), methods, and inheritance.
 
 Activity 2: Polymorphism Challenge 🎭
-We’ll create vehicles that share a move() method but behave differently.
-
-python
-Copy code
+We’ll create vehicles that share a move() method but behave differently
 class Vehicle:
     def move(self):
         print("The vehicle moves")
@@ -59,4 +56,3 @@ vehicles = [Car(), Plane(), Boat()]
 
 for v in vehicles:
     v.move()
-✅ Same method move() but different behaviors (polymorphism).
